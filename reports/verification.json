@@ -1,0 +1,42 @@
+{
+  "app_version": "0.5.0+5",
+  "stack": {
+    "mobile": "Flutter 3.47.2 / Dart 3.13.2",
+    "backend": "Python FastAPI",
+    "android_integration": "Kotlin platform bridge only"
+  },
+  "python_ml_tests": 16,
+  "backend_tests": 11,
+  "flutter_tests": 35,
+  "python_dart_parity_vectors": 259,
+  "flutter_analyze": "No issues found",
+  "physical_device_tested": false,
+  "production_ready": false,
+  "backend_publicly_deployed": false,
+  "model_sha256": "5ebc2cf9cafbbc91750df1a4361868ed49d7e00c65dd322b69d5fde315db122b",
+  "scope": "Research prototype. Emulator Android 14, synthetic reserved URLs. Historical dataset metrics do not establish real-world protection.",
+  "checks": [
+    "QR camera permission denial/retry and on-device decoding",
+    "Gallery QR confirmation/cancel, non-web and no-QR input",
+    "BM/English, local preference persistence and background warning",
+    "Notification pause and duplicate suppression"
+  ],
+  "total_code_tests": 62,
+  "validation": {
+    "date": "2026-11-19",
+    "source": "Clean export of the staged public files; no local SDK config, environments, raw dataset or build outputs included",
+    "python_ml_tests": "16 passed",
+    "backend_tests": "11 passed",
+    "flutter_tests": "35 passed",
+    "flutter_analyze": "No issues found",
+    "android_debug_build": "passed",
+    "gradle_wrapper_and_distribution_checksum": "verified and pinned",
+    "secret_scan": "Gitleaks 8.30.1; no findings in staged source",
+    "public_markdown_files": [
+      "README.md",
+      "SECURITY.md",
+      "docs/MODEL_CARD.md",
+      "docs/PRIVACY.md"
+    ]
+  }
+}

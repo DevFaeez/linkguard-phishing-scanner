@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-11-18T15:02:21.116088+00:00",
+  "source": "UCI PhiUSIIL #967",
+  "source_url": "https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset",
+  "license": "CC BY 4.0",
+  "original_labels": {
+    "0": "phishing",
+    "1": "legitimate"
+  },
+  "dataset_sha256": "0a639fd03aea6308c5b1c10c92aa23c2ce1505447a9137271865cd0badc9a59a",
+  "raw_rows": 235795,
+  "unique_nonconflicting_rows": 235370,
+  "conflicting_urls_removed": 0,
+  "invalid_rows_removed": 4,
+  "accepted_rows": 235366,
+  "features": [
+    "url_length",
+    "host_length",
+    "path_length",
+    "query_length",
+    "digit_ratio",
+    "dot_count",
+    "hyphen_count",
+    "at_count",
+    "percent_count",
+    "subdomain_count",
+    "is_ip",
+    "is_https",
+    "has_punycode",
+    "has_unicode",
+    "query_count",
+    "slash_count",
+    "entropy",
+    "suspicious_token_count"
+  ],
+  "splits": {
+    "train": {
+      "rows": 166369,
+      "domains": 138395,
+      "phishing": 72119
+    },
+    "validation": {
+      "rows": 34119,
+      "domains": 29656,
+      "phishing": 13832
+    },
+    "test": {
+      "rows": 34878,
+      "domains": 29657,
+      "phishing": 14565
+    }
+  },
+  "domain_overlap": 0,
+  "validation": {
+    "threshold": 0.09053719712222184,
+    "samples": 34119,
+    "phishing_count": 13832,
+    "precision": 0.9854162154357086,
+    "recall": 0.9867698091382302,
+    "false_positive_rate": 0.00995711539409474,
+    "roc_auc": 0.995534343164599,
+    "pr_auc": 0.9964096263614375,
+    "confusion": {
+      "tn": 20085,
+      "fp": 202,
+      "fn": 183,
+      "tp": 13649
+    }
+  },
+  "test": {
+    "threshold": 0.09053719712222184,
+    "samples": 34878,
+    "phishing_count": 14565,
+    "precision": 0.9864299910903982,
+    "recall": 0.9881908685204257,
+    "false_positive_rate": 0.00974745237040319,
+    "roc_auc": 0.9958491016214168,
+    "pr_auc": 0.9967989453182787,
+    "confusion": {
+      "tn": 20115,
+      "fp": 198,
+      "fn": 172,
+      "tp": 14393
+    }
+  },
+  "versions": {
+    "python": "3.14.6",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "tldextract": "5.4.0"
+  },
+  "limitations": [
+    "Single-source historical dataset; no future-time or Malaysian field evaluation.",
+    "Only URL lexical features; cannot inspect page content or short-link destinations.",
+    "Validation FPR budget is 1%; it is not guaranteed on test or live traffic.",
+    "Dataset class balance differs from real notifications; precision will differ.",
+    "No model comparison or calibrated probabilities yet. Not production qualified."
+  ]
+}
